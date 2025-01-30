@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Random Alligator Facts</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+        margin: 50px;
+        background-color: #f4f4f4;
+      }
+      .container {
+        background: white;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        display: inline-block;
+      }
+      button {
+        background: #28a745;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        font-size: 16px;
+        cursor: pointer;
+        margin-top: 20px;
+        border-radius: 5px;
+      }
+      button:hover {
+        background: #218838;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Random Alligator Facts</h1>
+      <p id="fact">Click the button to get a fact!</p>
+      <button onclick="showFact()">Get a Random Fact</button>
+    </div>
+
+    <script>
+      const facts = [
+        "Alligators have existed for over 80 million years!",
+        "There are only two species: American and Chinese alligators.",
+        "An alligator's bite force can reach 2,980 psi!",
+        "Alligators can regrow over 3,000 teeth in their lifetime.",
+        "They can survive in freezing temperatures by sticking their snouts out of the ice.",
+        "Alligators can swim up to 20 mph using their powerful tails.",
+        "Female alligators protect their young for up to a year.",
+        "Male alligators roar loudly to attract mates.",
+        "They hunt mostly at night using stealthy movements.",
+        "Alligators rarely attack humans unless provoked.",
+      ];
+
+      function showFact() {
+        const randomIndex = Math.floor(Math.random() * facts.length);
+        document.getElementById("fact").textContent = facts[randomIndex];
+      }
+    </script>
+  </body>
+</html>
